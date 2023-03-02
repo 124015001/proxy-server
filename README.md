@@ -97,3 +97,63 @@
   
   3. HTTPS CONNECT Requests.
   
+<h4>HTTP GET</h4>
+<p>Standard request made when client tries to load a webpage.</p>
+
+  1. Parse out the URL associated with the request.
+  
+  2. Create a HTTP connection to this URL. 
+  
+  3. Echo the client’s GET request to the remote server.
+  
+  4. Echo the server’s response back to the client and save a copy of file into the directory as proxy’s cache.
+  
+<h4>HTTP GET for File in Cache</h4>
+<p>Typical requests made by clients, in this case, the file is contained in the proxy’s cache.</p>
+
+  1. Parse out the URL associated with the request.
+  
+  2. Hash the URL and use this as the key for the HashMap data structure. 
+  
+  3. Open file found to read. 
+  
+  4. Echo the contents of the file back to the client.
+  
+  5. Close file.
+  
+<h4>HTTPS - CONNECT Requests</h4>
+<p>Since the CONNECT request uses ordinary HTTP, it is not encrypted. It includes the client's HTTPS request's destination address, which can be accessed through a proxy. Tunneling over HTTP.</p>
+
+  1. Client sends CONNECT Request.
+  
+  2. The proxy extracts the destination URL.
+  
+  3. Proxy establishes a connection using a normal socket to the remote server indicated by the URL.
+  
+  4. If the proxy is successfully constructed, it notifies the client with a "Connection Established" (200) response, allowing the client to transfer the encrypted data to the proxy.
+  
+  5. The proxy then transmits any data that is sent or received from a client to a distant server or vice versa. 
+<p>Since all of this data will be encrypted, the proxy is unable to cache or even decrypt it.</p>
+
+<div align="center">
+    <h2>4. MERITS</h2>
+</div>
+
+  1. The proxy server can cache HTTP requests to speed up access to previously accessed web pages and reduce waiting times.
+
+  2. Access to HTTP websites may be blocked or limited.
+
+  3. CONNECT Tunneling, which offers secure connections and data encryption, allows HTTPS connections even if the server is an HTTP proxy server (SSL). Data security is increased, guarding against Man in the Middle attacks.
+
+  4. Offers safer Internet browsing and improved network performance.
+<div align="center">
+    <h2>5. DEMERITS </h2>
+</div>
+
+  1. Because the connection is made over CONNECT and the data is encrypted, HTTPS requests cannot be cached.
+
+  2. Users cannot block or limit access to HTTPS sites.
+
+  3. HTTP queries are not secure because they are not encrypted.
+
+  4. Adequate security precautions must be performed before transmission because using a proxy server is often like allowing a third party to access data.
