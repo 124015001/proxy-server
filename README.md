@@ -157,3 +157,23 @@
   3. HTTP queries are not secure because they are not encrypted.
 
   4. Adequate security precautions must be performed before transmission because using a proxy server is often like allowing a third party to access data.
+
+<div align="center">
+    <h2>6. SNAPSHOTS</h2>
+</div>
+<div align="center">
+    fig 6.1 Directory Consisting of required files and “cached” folder for storing and retrieving Cache Files.
+    <img src="https://user-images.githubusercontent.com/74541810/222368480-6df9e7db-ec3a-423a-8b97-86c672dff2da.png">
+</div>
+<br><br><br><br>
+<div align="center">
+    fig 6.2 Firefox setup to forward all traffics to port number 6969
+    <img src="https://user-images.githubusercontent.com/74541810/222368864-d15d2a98-3497-498e-8be6-75ba12cca46d.png">
+</div>
+<br><br><br><br>
+• Creates cached_sites.txt and block_sites.txt as it’s not found in the directory
+<div align="center">
+    fig 6.3 Proxy Server Menu
+    <img src="https://user-images.githubusercontent.com/74541810/222370588-dbb51e78-dde4-4a02-93b9-ac4b74363121.png"
+</div>
+
